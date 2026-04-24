@@ -1,0 +1,40 @@
+using  System;
+
+public class Program
+{
+	public static void Main()
+	{
+		float a;
+		float b;
+		
+		float.TryParse(Console.ReadLine(), out a);
+		string oper = Console.ReadLine();
+		float.TryParse(Console.ReadLine(), out b);
+		
+		Console.WriteLine(Calk(a, b, oper));
+	}
+	
+	static float? Calk(float a, float b, string oper)
+	{
+		if (oper == "+")
+		{
+			return a + b;
+		}
+		
+		if (oper == "-")
+		{
+			return a - b;
+		}
+		
+		if (oper == "*")
+		{
+			return a * b;
+		}
+		
+		if (oper == "/")
+		{
+			return a / b;
+		}
+		return null;
+	}
+}
